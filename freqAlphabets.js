@@ -1,3 +1,8 @@
+// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+// Problem
+// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
 // Given a string s formed by digits ('0' - '9') and '#' .
 
 // We want to map s to English lowercase characters as follows:
@@ -14,28 +19,51 @@
 // s will be valid string such that mapping is always possible.
 
 // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+// Pseudo Code
+// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+//  - Write a function called freqAlphabets that accepts a string as an argument
+//    - Create a variable called convertedArr which initializes as an empty array
+//      to keep track of each number we convert into a letter
+
+//  - Iterate over the input string with a for loop starting with the last character in the string
+//    - If the character at the current index is a '#'
+//      - Convert the next two consecutive characters before the current integer into an integer
+//      - Combine the two converted integers into 1 integer (do not add them)
+//      - Add 96 to the converted integer
+//      - Convert the integer into it's ASCII code character
+//      - Add the converted character to convertedArr
+//     - Otherwise
+//      - Convert the character at the current index into an integer
+//      - Add 96 to the converted integer
+//      - Convert the integer into it's ASCII code character
+//      - Add the converted character to convertedArr
+
+//  - Coerce convertedArr into a string and return it
+
+// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+// Final Solution
+// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
 
 var freqAlphabets = function(s) {
-  let a = []
+  const convertedArr = []
 
   for(let i = s.length - 1; i >= 0; i--){
     if(s[i] === '#') {
-      a.unshift(String.fromCharCode(parseInt(s[i - 2] + s[i - 1]) + 96))
+      convertedArr.unshift(String.fromCharCode(parseInt(s[i - 2] + s[i - 1]) + 96))
       i = i - 2
-    } else a.unshift(String.fromCharCode(parseInt(s[i]) + 96))
+    } else convertedArr.unshift(String.fromCharCode(parseInt(s[i]) + 96))
   }
 
-  return a.join('')
+  return convertedArr.join('')
 }
 
 // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+// Test Cases
+// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-console.log(freqAlphabets("10#11#12")) // 'jkab'
-
-// Explanation: "j" -> "10#" , "k" -> "11#" , "a" -> "1" , "b" -> "2".
-
-console.log(freqAlphabets("1326#")) // 'acz'
-
-console.log(freqAlphabets("25#")) // 'y'
-
-console.log(freqAlphabets("12345678910#11#12#13#14#15#16#17#18#19#20#21#22#23#24#25#26#")) // 'abcdefghijklmnopqrstuvwxyz'
+console.log(freqAlphabets("10#11#12"))
+console.log(freqAlphabets("1326#"))
+console.log(freqAlphabets("25#"))
+console.log(freqAlphabets("12345678910#11#12#13#14#15#16#17#18#19#20#21#22#23#24#25#26#"))

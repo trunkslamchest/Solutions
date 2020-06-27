@@ -1,3 +1,7 @@
+// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+// Problem
+// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
 // A self-dividing number is a number that is divisible by every digit it contains.
 // For example, 128 is a self-dividing number because 128 % 1 == 0, 128 % 2 == 0, and 128 % 8 == 0.
 // Also, a self-dividing number is not allowed to contain the digit zero.
@@ -6,12 +10,10 @@
 // Constraints:
 // The boundaries of each input argument are 1 <= left <= right <= 10000
 
-// Edge Cases:
-//  - number contains a zero => exclude or return false
-//  - i is less than 10 => return true because a number with a single digit number % itself = 0
+// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+// Pseudo Code
+// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-
-// Psuedo:
 // - loop through numbers from left to right (i)
 //  - for loop
 //  - do not need to store set of numbers
@@ -30,66 +32,23 @@
 
 // - return array
 
-
 // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-// var selfDividingNumbers = function(left, right) {
-//   let a = []
-
-//   for(let i = left; i <= right; i++){
-//       for(let j = 0; j < b.length; j++){
-
-//       }
-//     }
-
-//   }
-
-//   return a
-// }
-
-// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-// var selfDividingNumbers = function(left, right) {
-//   let a = []
-
-//   for(let i = left; i <= right; i++){
-//     let b = []
-
-//     if (i < 10) a.push(i)
-//     else {
-//       b = [ ...i.toString().split('') ]
-
-//       for(let j = 0; j < b.length; j++){
-
-//       }
-//     }
-
-//   }
-
-//   return a
-// }
-
+// Final Solution
 // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 var selfDividingNumbers = function(left, right) {
-  const a = []
+  let a = []
 
   for(let i = left; i <= right; i++){
     let b = []
 
-    if (i < 10) {
-      a.push(i)
-    } else {
-
+    if (i < 10) a.push(i)
+    else {
       b = [ ...i.toString().split('') ]
 
       for(let j = 0; j < b.length; j++){
-        if (i % b[j] !== 0) {
-          break
-        }
-        if (j === b.length - 1) {
-          a.push(i)
-        }
+        if (i % b[j] !== 0) break
+        if (j === b.length - 1) a.push(i)
       }
     }
 
@@ -99,31 +58,7 @@ var selfDividingNumbers = function(left, right) {
 }
 
 // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-// var selfDividingNumbers = function(left, right) {
-//   let a = []
-
-//   for(let i = left; i <= right; i++){
-//     let b = []
-
-//     if (i < 10) a.push(i)
-//     else {
-//       b = [ ...i.toString().split('') ]
-
-//       for(let j = 0; j < b.length; j++){
-//         if (i % b[j] !== 0) break
-//         if (j === b.length - 1) a.push(i)
-//       }
-//     }
-
-//   }
-
-//   return a
-// }
-
+// Test Cases
 // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-
 console.log(selfDividingNumbers(1, 22)) // [1, 2, 3, 4, 5, 6, 7, 8, 9, 11, 12, 15, 22]
-
-// console.log(0 % 0)

@@ -1,32 +1,73 @@
+// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+// Problem
+// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
 // Given an array nums of integers, return how many of them contain an even number of digits.
 
-// Constraints:
+// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+// Constraints
+// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
 // 1 <= nums.length <= 500
 // 1 <= nums[i] <= 10^5
 
 // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+// String Coersion Pseudo Code
+// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-var findNumbers = function(nums) {
-	let c = 0
+//  - Write a function called evenNumberOfDigits that accepts an array as an argument
+//    - Create a variable called count to keep track of the amount of even numbered digits
 
-	function numDigits(n){ return Math.floor(Math.log10(Math.abs(n))) + 1 }
+//  - Loop through the input array nums with a for loop or a for in loop
+//    - Convert each element in the array to a string
+//    - If the length of the converted number is even
+//      - add 1 to the count variable
 
-	for(i = 0; i < nums.length; i++){ if(numDigits(nums[i]) % 2 === 0) c++ }
+//  - Return the count variable
 
-	return c
+// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+// Math.log10() Pseudo Code
+// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+//  - Write a function called evenNumberOfDigits that accepts an array as an argument
+//    - Create a variable called count to keep track of the amount of even numbered digits
+
+//  - Write a function called numberOfDigits that accepts a number as an argument
+//    - Find the Math.log10(number)
+//    - Add 1 to Math.log10(number)
+//    - Round Math.log10(number) + 1 down to the nearest whole integer
+//    - Return Math.floor(Math.log10(number) + 1)
+
+
+// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+// String Coersion Solution
+// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+var evenNumberOfDigits = function(nums) {
+  let count = 0
+
+  for(let number in nums) if (nums[number].toString().length % 2 === 0) count++
+
+  return count
 };
 
 // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+// Math.log10() Solution
+// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-console.log(findNumbers([12,345,2,6,7896])) // 2
-// Explanation:
-// 12 contains 2 digits (even number of digits).
-// 345 contains 3 digits (odd number of digits).
-// 2 contains 1 digit (odd number of digits).
-// 6 contains 1 digit (odd number of digits).
-// 7896 contains 4 digits (even number of digits).
-// Therefore only 12 and 7896 contain an even number of digits.
+var evenNumberOfDigits = function(nums) {
+  let count = 0
 
-console.log(findNumbers([555,901,482,1771])) // 1
-// Explanation:
-// Only 1771 contains an even number of digits.
+  function numberOfDigits(number){ return Math.floor(Math.log10(number)) + 1 }
+
+  for(let number in nums) { if(numberOfDigits(nums[number]) % 2 === 0) count++ }
+
+  return count
+};
+
+// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+// Test Cases
+// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+console.log(evenNumberOfDigits([12,345,2,6,7896])) // 2
+console.log(evenNumberOfDigits([555,901,482,1771])) // 1

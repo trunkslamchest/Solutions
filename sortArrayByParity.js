@@ -1,4 +1,10 @@
-// Given an array A of non-negative integers, return an array consisting of all the even elements of A, followed by all the odd elements of A.
+// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+// Problem
+// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+// Given an array A of non-negative integers,
+// return an array consisting of all the even elements of A,
+// followed by all the odd elements of A.
 
 // You may return any answer array that satisfies this condition.
 
@@ -7,118 +13,45 @@
 // 0 <= A[i] <= 5000
 
 // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-// var sortArrayByParity = function(A) {
-//   let b = [], c = []
-
-//   while(A.length > 0){
-
-//   }
-
-//   return [...b, ...c]
-// }
-
+// Pseudo Code
 // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-// var sortArrayByParity = function(A) {
-//   let b = [], c = []
+// - Define a function called sortArrayByParity which accepts an array as an argument
+// - Define two arrays (even and odd) and initialize them as empty arrays
 
-//   while(A.length > 0){
-//     if(A[0] % 2 !== 0) {
-//       if (A[0] < c[0]) {
-//         c.unshift(A.shift())
-//       } else {
-//         c.push(A.shift())
-//       }
-//     } else {
-//       // do some magic
-//     }
-//   }
+// - Define a while loop that iterates through A while A.length is greater than 0
+//   - If the first element in A is even,
+//     - push shift the first element in A into the even array
+//   - Otherwise,
+//     - push shift the first element in A into the odd array
 
-//   return [...b, ...c]
-// }
+// - Combine the even and odd array and return it
 
 // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-// var sortArrayByParity = function(A) {
-//   let b = [], c = []
-
-//   while(A.length > 0){
-//     if(A[0] % 2 !== 0) {
-//       if (A[0] < c[0]) {
-//         c.unshift(A.shift())
-//       } else {
-//         c.push(A.shift())
-//       }
-//     } else {
-//       if (A[0] < b[0]) {
-//         b.unshift(A.shift())
-//       } else {
-//         b.push(A.shift())
-//       }
-//     }
-//   }
-
-//   return [...b, ...c]
-// }
-
-// // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+// Final Solution
+// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 var sortArrayByParity = function(A) {
-	let b = [], c = []
+  let b = [], c = []
 
-	while(A.length > 0){
-		if(A[0] % 2 !== 0) {
-			if (A[0] < c[0]) c.unshift(A.shift())
-			else c.push(A.shift())
-		} else {
-			if (A[0] < b[0]) b.unshift(A.shift())
-			else b.push(A.shift())
-		}
-	}
+  while(A.length > 0){
+    if(A[0] % 2 !== 0) {
+      if (A[0] < c[0]) c.unshift(A.shift())
+      else c.push(A.shift())
+    } else {
+      if (A[0] < b[0]) b.unshift(A.shift())
+      else b.push(A.shift())
+    }
+  }
 
-	return [...b, ...c]
+  return [...b, ...c]
 }
 
-// // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-// var sortArrayByParity = function(A) {
-//   const b = [], c = []
-
-//   // while(A.length > 0){
-//   //   if(A[0] % 2 === 0) {
-//   //     if (A[0] < b[0]) b.unshift(A.shift())
-//   //     else b.push(A.shift())
-//   //   } else {
-//   //     c.push(A.shift())
-//   //   }
-//   // }
-
-//   for (let n in A){
-//       console.log(A[n])
-//     if (A[n] % 2 === 0) {
-//       // A.unshift(A[n])
-//     //   A = [...A, A[n]]
-//     //   A.shift()
-//     } else {
-//       // A.push(A[n])
-//     }
-//     console.log(A)
-//   }
-
-//   // console.log(b)
-//   // return A
-// 	// return [...b, ...c]
-// }
-
+// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+// Test Cases
 // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 console.log(sortArrayByParity([3,1,2,4])) // [2,4,3,1]
-
-// The outputs [4,2,3,1], [2,4,1,3], and [4,2,1,3] would also be accepted.
-
 console.log(sortArrayByParity([0, 1])) // [0, 1]
-
 console.log(sortArrayByParity([0, 1, 2])) // [0, 2, 1]
-
 console.log(sortArrayByParity([3, 2, 0, 5, 4, 1])) // [0, 2, 4, 3, 5, 1]

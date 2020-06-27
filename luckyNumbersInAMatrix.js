@@ -1,3 +1,7 @@
+// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+// Problem
+// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
 // Given a m * n matrix of distinct numbers, return all lucky numbers in the matrix in any order.
 
 // A lucky number is an element of the matrix such that it is the minimum element in its row and maximum in its column.
@@ -9,6 +13,38 @@
 // - 1 <= matrix[i][j] <= 10^5.
 // - All elements in the matrix are distinct.
 
+// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+// Pseudo Code
+// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+// - Write a function called 'luckyNumbers' that accepts an array as an argument
+
+// - Define two empty arrays to keep track of the values in each sub array
+//  - An array called 'minRow' to store all the minimum elements from each row vector
+//  - An array called 'maxCol' to store all the maximum elements from each column vector
+
+// - Write a for loop or a for..in loop that iterates through each row vector(or sub array)
+//   - Find the minimum number in each row by calling Math.min.apply() on a null object,
+//     and the row vector (or sub array) we are currently iterating through
+//   - Push the result of Math.min.apply() into 'minRow'
+
+// - Write a for loop or a for...in loop that iterates through each subarray
+//   - Define a variable called 'max' and set it's value equal to 0
+
+//   - Write a nested for loop or a for...in loop that iterates through each column vector(or corresponding element in each column)
+//     - If an element in a column (matrix[j][i]) is greater than 'max'
+//       - Replace the value of 'max' with matrix[j][i]
+//     - Push 'max' into 'maxCol' at the end of each iteration
+
+
+// - Iterate through 'minRow' by using .filter()
+//   - Set each element equal to 'n'
+//   - Call .includes(n) on 'maxCol' to filter any numbers that don't appear in both arrays
+
+// Return the result of the .filter() call on 'minRow'
+
+// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+// Final Solution
 // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 var luckyNumbers  = function(matrix) {
@@ -26,33 +62,10 @@ var luckyNumbers  = function(matrix) {
 }
 
 // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+// Test Cases
+// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 console.log(luckyNumbers([[3,7,8],[9,11,13],[15,16,17]])) // [15]
-
-// [ 3, 7, 8]
-// [ 9,11,13]
-// [15,16,17]
-
-// Explanation:
-//  15 is the only lucky number since it is the minimum in its row and the maximum in its column
-
 console.log(luckyNumbers([[1,10,4,2],[9,3,8,7],[15,16,17,12]])) // [12]
-
-// [ 1,10, 4, 2]
-// [ 9, 3, 8, 7]
-// [15,16,17,12]
-
-// Explanation:
-//  12 is the only lucky number since it is the minimum in its row and the maximum in its column.
-
 console.log(luckyNumbers([[7,8],[1,2]])) // [7]
-
-// [7,8]
-// [1,2]
-
-
 console.log(luckyNumbers([[7,3],[8,9],[1,2]])) // [8]
-
-// [7,3]
-// [8,9]
-// [1,2]
