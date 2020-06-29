@@ -1,3 +1,6 @@
+// Link to problem: https://leetcode.com/problems/create-target-array-in-the-given-order/
+// Link to blog: https://levelup.gitconnected.com/javascript-problem-solvers-create-target-array-33cdb61c7a87
+
 // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 // Problem
 // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

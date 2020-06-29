@@ -1,3 +1,6 @@
+// Link to problem: https://leetcode.com/problems/sort-array-by-parity/
+// Link to blog: https://levelup.gitconnected.com/javascript-problem-solvers-sort-array-by-parity-b9c2debc14f
+
 // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 // Problem
 // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

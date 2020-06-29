@@ -1,3 +1,6 @@
+// Link to problem: https://leetcode.com/problems/remove-outermost-parentheses/
+// Link to blog: https://levelup.gitconnected.com/javascript-problem-solvers-remove-outermost-parentheses-90381c24b2c6
+
 // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 // Problem
 // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

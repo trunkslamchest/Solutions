@@ -1,3 +1,6 @@
+// Link to problem: https://leetcode.com/problems/self-dividing-numbers/
+// Link to blog: https://levelup.gitconnected.com/javascript-problem-solvers-self-dividing-number-6f3d77499df8
+
 // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 // Problem
 // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

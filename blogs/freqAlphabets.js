@@ -1,3 +1,6 @@
+// Link to problem: https://leetcode.com/problems/decrypt-string-from-alphabet-to-integer-mapping/
+// Link to blog: https://levelup.gitconnected.com/javascript-problem-solvers-integer-to-string-decryption-bbb97a83122e
+
 // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 // Problem
 // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

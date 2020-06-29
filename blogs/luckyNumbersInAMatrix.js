@@ -1,3 +1,6 @@
+// Link to problem: https://leetcode.com/problems/lucky-numbers-in-a-matrix/
+// Link to blog: https://levelup.gitconnected.com/javascript-problem-solvers-lucky-numbers-in-a-matrix-a2525986cdb4
+
 // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 // Problem
 // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

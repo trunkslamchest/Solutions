@@ -1,3 +1,5 @@
+// Link to blog: https://levelup.gitconnected.com/javascript-problem-solvers-instagram-stickers-749df57ecba4
+
 // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 // Problem
 // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

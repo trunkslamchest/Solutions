@@ -1,3 +1,6 @@
+// Link to problem: https://leetcode.com/problems/find-numbers-with-even-number-of-digits/
+// Link to blog: https://levelup.gitconnected.com/javascript-problem-solvers-even-number-of-digits-39b4915b4b1
+
 // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 // Problem
 // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
