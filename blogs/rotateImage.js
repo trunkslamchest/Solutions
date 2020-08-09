@@ -2,6 +2,9 @@
 // Problem
 // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
+// Link To Problem: https://app.codesignal.com/interview-practice/task/5A8jwLGcEpTPyyjTB
+// Link To Blog: https://medium.com/@austin_smith_dev/javascript-problem-solvers-rotate-image-matrix-c02323c1c2fb
+
 // Note: Try to solve this task in-place (with O(1) additional memory), since this is what you'll be asked to do during an interview.
 
 // You are given an n x n 2D matrix that represents an image. Rotate the image by 90 degrees (clockwise).
@@ -51,32 +54,32 @@
 
 // Iteration 01
 
-  // Nested Iteration 01
-    // swap row[i][j] with row[j][y] (row[0][3])
-    // swap row[i][j] with row[y][x] (row[3][3])
-    // swap row[i][j] with row[x][i] (row[3][0])
-    // increment j
-    // decrement x
+//   Nested Iteration 01
+//     swap row[i][j] with row[j][y] (row[0][3])
+//     swap row[i][j] with row[y][x] (row[3][3])
+//     swap row[i][j] with row[x][i] (row[3][0])
+//     increment j
+//     decrement x
 
-  // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-  // Nested Iteration 02
-    // swap row[i][j] with row[j][y] (row[1][3])
-    // swap row[i][j] with row[y][x] (row[3][2])
-    // swap row[i][j] with row[x][i] (row[2][0])
-    // increment j
-    // decrement x
+//   Nested Iteration 02
+//     swap row[i][j] with row[j][y] (row[1][3])
+//     swap row[i][j] with row[y][x] (row[3][2])
+//     swap row[i][j] with row[x][i] (row[2][0])
+//     increment j
+//     decrement x
 
-  // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-  // Nested Iteration 03
-    // swap row[i][j] with row[j][y] (row[2][3])
-    // swap row[i][j] with row[y][x] (row[3][1])
-    // swap row[i][j] with row[x][i] (row[1][0])
-    // increment j
-    // decrement x
+//   Nested Iteration 03
+//     swap row[i][j] with row[j][y] (row[2][3])
+//     swap row[i][j] with row[y][x] (row[3][1])
+//     swap row[i][j] with row[x][i] (row[1][0])
+//     increment j
+//     decrement x
 
-  // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 // decrement y
 
@@ -85,12 +88,12 @@
 
 // Iteration 02
 
-  // Nested Iteration 01
-    // swap row[i][j] with row[j][y] (row[1][2])
-    // swap row[i][j] with row[y][x] (row[2][2])
-    // swap row[i][j] with row[x][i] (row[2][1])
-    // increment j
-    // decrement x
+//   Nested Iteration 01
+//     swap row[i][j] with row[j][y] (row[1][2])
+//     swap row[i][j] with row[y][x] (row[2][2])
+//     swap row[i][j] with row[x][i] (row[2][1])
+//     increment j
+//     decrement x
 
 // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -113,16 +116,16 @@
 //   [8,-,-,5]
 //   [1,-,-,9]
 //   [5,7,3,4]
-//
+
 // swap row[i][j] with row[y][x] (row[3][3])
-//
+
 //  >[4,3,1,6]
 //   [8,-,-,5]
 //   [1,-,-,9]
 //   [5,7,3,7]
 //          ^
 // swap row[i][j] with row[x][i] (row[3][0])
-//
+
 //  >[5,3,1,6]
 //   [8,-,-,5]
 //   [1,-,-,9]
@@ -145,7 +148,7 @@
 //   [8,-,-,3]<
 //   [1,-,-,9]
 //   [4,7,3,7]
-//
+
 // swap row[i][j] with row[y][x] (row[3][2])
 //      v
 //   [5,3,1,6]
@@ -176,7 +179,7 @@
 //   [8,-,-,3]
 //   [3,-,-,1]<
 //   [4,7,5,7]
-//
+
 // swap row[i][j] with row[y][x] (row[3][1])
 //        v
 //   [5,1,7,6]
@@ -213,7 +216,7 @@
 //   [-,4,2,-]<
 //   [-,6,2,-]
 //   [-,-,-,-]
-//
+
 // swap row[i][j] with row[y][x] (row[2][2])
 //      v
 //   [-,-,-,-]
@@ -227,7 +230,7 @@
 //   [-,6,2,-]
 //  >[-,2,4,-]
 //   [-,-,-,-]
-//
+
 
 // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 // Solutions
@@ -247,7 +250,6 @@ function rotateImage(a) {
       t = a[i][j]
       a[i][j] = a[x][i]
       a[x][i] = t
-      t = a[i][j]
       x--
     }
     y--
@@ -256,13 +258,13 @@ function rotateImage(a) {
 }
 
 console.log(rotateImage(
-  [
-    [10,9,6,3,7],
-    [6,10,2,9,7],
-    [7,6,3,8,2],
-    [8,9,7,9,9],
-    [6,8,6,8,2]
-  ]
+  // [
+  //   [10,9,6,3,7],
+  //   [6,10,2,9,7],
+  //   [7,6,3,8,2],
+  //   [8,9,7,9,9],
+  //   [6,8,6,8,2]
+  // ]
 ))
 
 // [
@@ -293,22 +295,15 @@ console.log(rotateImage(
 //   [4,9,5,7],
 // ]
 
-// [
-//   [6,3,1,7],
-//   [8,2,4,5],
-//   [1,6,2,9],
-//   [5,7,3,4],
-// ]
-
 // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-console.log(rotateImage(
-  [
-    [1,2,3],
-    [4,5,6],
-    [7,8,9]
-  ]
-))
+// console.log(rotateImage(
+  // [
+  //   [1,2,3],
+  //   [4,5,6],
+  //   [7,8,9]
+  // ]
+// ))
 
 // [
 //   [7,4,1],
@@ -318,25 +313,25 @@ console.log(rotateImage(
 
 // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-console.log(rotateImage([[1]]))
+// console.log(rotateImage([[1]]))
 
 // [[1]]
 
 // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 // console.log(rotateImage(
-//   [
-//     [40,12,15,37,33,11,45,13,25,3],
-//     [37,35,15,43,23,12,22,29,46,43],
-//     [44,19,15,12,30,2,45,7,47,6],
-//     [48,4,40,10,16,22,18,36,27,48],
-//     [45,17,36,28,47,46,8,4,17,3],
-//     [14,9,33,1,6,31,7,38,25,17],
-//     [31,9,17,11,29,42,38,10,48,6],
-//     [12,13,42,3,47,24,28,22,3,47],
-//     [38,23,26,3,23,27,14,40,15,22],
-//     [8,46,20,21,35,4,36,18,32,3]
-//   ]
+  // [
+  //   [40,12,15,37,33,11,45,13,25,3],
+  //   [37,35,15,43,23,12,22,29,46,43],
+  //   [44,19,15,12,30,2,45,7,47,6],
+  //   [48,4,40,10,16,22,18,36,27,48],
+  //   [45,17,36,28,47,46,8,4,17,3],
+  //   [14,9,33,1,6,31,7,38,25,17],
+  //   [31,9,17,11,29,42,38,10,48,6],
+  //   [12,13,42,3,47,24,28,22,3,47],
+  //   [38,23,26,3,23,27,14,40,15,22],
+  //   [8,46,20,21,35,4,36,18,32,3]
+  // ]
 // ))
 
 // [
