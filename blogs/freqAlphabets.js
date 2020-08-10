@@ -5,7 +5,6 @@
 // Problem
 // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-
 // Given a string s formed by digits ('0' - '9') and '#' .
 
 // We want to map s to English lowercase characters as follows:
@@ -48,17 +47,14 @@
 // Final Solution
 // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-
 var freqAlphabets = function(s) {
   const convertedArr = []
-
   for(let i = s.length - 1; i >= 0; i--){
     if(s[i] === '#') {
       convertedArr.unshift(String.fromCharCode(parseInt(s[i - 2] + s[i - 1]) + 96))
       i = i - 2
     } else convertedArr.unshift(String.fromCharCode(parseInt(s[i]) + 96))
   }
-
   return convertedArr.join('')
 }
 

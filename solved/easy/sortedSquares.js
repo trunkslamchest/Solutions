@@ -19,11 +19,9 @@
 
 // Edge Cases
 
-
 // Psuedo
 
 // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
 
 // var sortedSquares = function(A) {
 //   let b = A.map(n => n * n)
@@ -40,21 +38,6 @@
 // }
 
 // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-// var sortedSquares = function(A) {
-//   let squares = A.map(n => n * n)
-
-//   for(let i = 0; i < squares.length;i++){
-//     for(let j = i; j < squares.length;j++){
-//       if(squares[i] > squares[j]){
-//         let temp = squares[i]
-//         squares[i] = squares[j]
-//         squares[j] = temp
-//       }
-//     }
-//   }
-
-//   return squares
 
 var sortedSquares = function(A) {
   let b = A.map(n => n * n)

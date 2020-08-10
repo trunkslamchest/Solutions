@@ -257,7 +257,7 @@ function rotateImage(a) {
   return a
 }
 
-console.log(rotateImage(
+// console.log(rotateImage(
   // [
   //   [10,9,6,3,7],
   //   [6,10,2,9,7],
@@ -265,7 +265,7 @@ console.log(rotateImage(
   //   [8,9,7,9,9],
   //   [6,8,6,8,2]
   // ]
-))
+// ))
 
 // [
 //   [6,8,7,6,10],
@@ -278,14 +278,14 @@ console.log(rotateImage(
 
 // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-// console.log(rotateImage(
-//   [
-//     [6,3,1,7],
-//     [8,2,4,5],
-//     [1,6,2,9],
-//     [5,7,3,4],
-//   ]
-// ))
+console.log(rotateImage(
+  [
+    [6,3,1,7],
+    [8,2,4,5],
+    [1,6,2,9],
+    [5,7,3,4],
+  ]
+))
 
 
 // [

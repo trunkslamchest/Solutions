@@ -48,14 +48,11 @@
 
 function instagramStickers(phrase) {
   let charCount = {}, minimumStickers = 0, phraseToLower = phrase.toLowerCase()
-
   for(let char in phraseToLower) if (phraseToLower[char] !== ' ') charCount[phraseToLower[char]] = ( charCount[phraseToLower[char]] || 0 ) + 1
-
   for(let char in charCount){
     if(char === 'a') charCount[char] = Math.round(charCount[char] / 2)
     if(minimumStickers < charCount[char]) minimumStickers = charCount[char]
   }
-
   return minimumStickers
 }
 

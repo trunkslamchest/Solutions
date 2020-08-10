@@ -74,11 +74,10 @@ function firstDuplicate(a) {
 // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 console.log(firstDuplicate([2, 1, 3, 5, 3, 2])) // 3
-// console.log(firstDuplicate([2, 3, 3])) // 3
-// console.log(firstDuplicate([1, 1, 2, 2, 1])) // 1
-
-// console.log(firstDuplicate([2, 1, 3])) // -1
-// console.log(firstDuplicate([3, 3, 3])) // 3
-// console.log(firstDuplicate([5, 5, 5, 5, 5])) // 5
+console.log(firstDuplicate([2, 3, 3])) // 3
+console.log(firstDuplicate([1, 1, 2, 2, 1])) // 1
+console.log(firstDuplicate([2, 1, 3])) // -1
+console.log(firstDuplicate([3, 3, 3])) // 3
+console.log(firstDuplicate([5, 5, 5, 5, 5])) // 5
 
 

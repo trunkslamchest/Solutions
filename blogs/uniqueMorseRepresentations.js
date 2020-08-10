@@ -43,23 +43,17 @@
 
 var uniqueMorseRepresentations = function(words) {
   if(words.length === 0) return 0
-
   const alpha = [".-","-...","-.-.","-..",".","..-.","--.","....","..",".---","-.-",".-..","--","-.","---",".--.","--.-",".-.","...","-","..-","...-",".--","-..-","-.--","--.."]
-
   let count = {}, str = words.join(' '), fullCode = ''
-
   for(char in str) {
     if(str[char] !== ' ') fullCode += alpha[(str.charCodeAt(char) - 96) - 1]
     else fullCode += ' '
   }
-
   fullCode.split(' ').forEach(phrase => count[phrase] = count[phrase] ? ++count[phrase] : 1)
-
   return Object.values(count).length
 }
 
 // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
 
 console.log(uniqueMorseRepresentations(["gin", "zen", "gig", "msg"])) // 2
 

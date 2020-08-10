@@ -38,20 +38,20 @@
 // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 var flipAndInvertImage = function(A) {
-	for(let i = 0; i < A.length; i++){
-		let b = []
+  for(let i = 0; i < A.length; i++){
+    let b = []
 
-		for(let j = A[i].length - 1; j >= 0; j--){ b.push(A[i][j]) }
+    for(let j = A[i].length - 1; j >= 0; j--){ b.push(A[i][j]) }
 
-		A[i] = b
+    A[i] = b
 
-		for(let k = 0; k < A[i].length; k++){
-			if(!A[i][k]) A[i][k] = 1
-			else A[i][k] = 0
-		}
-	}
+    for(let k = 0; k < A[i].length; k++){
+      if(!A[i][k]) A[i][k] = 1
+      else A[i][k] = 0
+    }
+  }
 
-	return A
+  return A
 }
 
 console.log(flipAndInvertImage([[1,1,0],[1,0,1],[0,0,0]])) // [[1,0,0],[0,1,0],[1,1,1]]

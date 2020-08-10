@@ -52,15 +52,12 @@
 
 var luckyNumbers  = function(matrix) {
   let minRow = [], maxCol = []
-
   for(let i = 0; i < matrix.length; i++) { minRow.push(Math.min.apply(null, matrix[i])) }
-
   for(let j = 0; j < matrix[0].length; j++) {
     let max = 0
     for(let k = 0; k < matrix.length; k++){ if(matrix[k][j] > max) max = matrix[k][j] }
     maxCol.push(max)
   }
-
   return minRow.filter(n => maxCol.includes(n))
 }
 

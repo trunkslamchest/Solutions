@@ -65,20 +65,15 @@
 var removeOuterParentheses = function(S) {
   let count = {}, num = 0
   const primativesArr = []
-
   for(let i = 0; i < S.length; i++){
     count[S[i]] = count[S[i]] ? ++count[S[i]] : 1
-
     if(count['('] === count[')']){
       primativesArr.push(S.slice(num, i + 1))
       count = {}
       num = i + 1
     }
-
   }
-
   for(let primative in primativesArr){ primativesArr[primative] = primativesArr[primative].slice(1, primativesArr[primative].length - 1) }
-
   return primativesArr.join('')
 };
 

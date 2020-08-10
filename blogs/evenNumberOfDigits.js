@@ -41,16 +41,13 @@
 //    - Round Math.log10(number) + 1 down to the nearest whole integer
 //    - Return Math.floor(Math.log10(number) + 1)
 
-
 // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 // String Coersion Solution
 // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 var evenNumberOfDigits = function(nums) {
   let count = 0
-
   for(let number in nums) if (nums[number].toString().length % 2 === 0) count++
-
   return count
 };
 
@@ -60,11 +57,8 @@ var evenNumberOfDigits = function(nums) {
 
 var evenNumberOfDigits = function(nums) {
   let count = 0
-
   function numberOfDigits(number){ return Math.floor(Math.log10(number)) + 1 }
-
   for(let number in nums) { if(numberOfDigits(nums[number]) % 2 === 0) count++ }
-
   return count
 };
 

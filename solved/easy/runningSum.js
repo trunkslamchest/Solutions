@@ -42,7 +42,6 @@
 
 //  - return sumArr
 
-
 // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 // Solutions
 // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -58,9 +57,7 @@ var runningSum = function(nums) {
   return nums
 };
 
-
 // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
 
 // var runningSum = function(nums) {
 //   let sum = 0, sumArr = []
@@ -72,7 +69,6 @@ var runningSum = function(nums) {
 
 //   return sumArr
 // };
-
 
 // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 // Test Cases

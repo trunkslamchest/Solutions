@@ -52,12 +52,7 @@ function almostSubstring(t, s) {
   return n
 }
 
-
-
 // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-// console.log(almostSubstring("azcabcab", "acb")) // 2
+console.log(almostSubstring("azcabcab", "acb")) // 2
 console.log(almostSubstring("aabbcc", "abc")) // 2
-// console.log(almostSubstring()) //
-// console.log(almostSubstring()) //
-// console.log(almostSubstring()) //

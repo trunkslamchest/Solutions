@@ -41,22 +41,17 @@
 
 var selfDividingNumbers = function(left, right) {
   let a = []
-
   for(let i = left; i <= right; i++){
     let b = []
-
     if (i < 10) a.push(i)
     else {
       b = [ ...i.toString().split('') ]
-
       for(let j = 0; j < b.length; j++){
         if (i % b[j] !== 0) break
         if (j === b.length - 1) a.push(i)
       }
     }
-
   }
-
   return a
 }
 

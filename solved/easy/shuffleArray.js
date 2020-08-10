@@ -44,22 +44,22 @@
 // Solutions
 // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-// var shuffle = function(nums, n) {
-//   let a = []
+var shuffle = function(nums, n) {
+  let a = []
 
-//   for(let i = 0; i < n; i++){
-//     a.push(nums[i])
-//     a.push(nums[i + n])
-//   }
+  for(let i = 0; i < n; i++){
+    a.push(nums[i])
+    a.push(nums[i + n])
+  }
 
-//   return a
-// };
+  return a
+};
 
 // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-var shuffle = function(nums, n) {
+// var shuffle = function(nums, n) {
 
-};
+// };
 
 // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 // Test Cases

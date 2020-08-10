@@ -23,39 +23,18 @@
 // Solutions
 // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-// var maxProduct = function(nums) {
-//   for(let i = 0; i < nums.length;i++){
-//     for(let j = i; j < nums.length;j++){
-//       if(nums[i] > nums[j]){
-//         let temp = nums[i]
-//         nums[i] = nums[j]
-//         nums[j] = temp
-//       }
-//     }
-//   }
-
-//   return (nums[nums.length - 1]-1)*(nums[nums.length - 2]-1)
-// };
-
-// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
 var maxProduct = function(nums) {
-  let max1 = 0, max2 = 0
-
   for(let i = 0; i < nums.length;i++){
-    let currentMax = max1
-    if(max1 < nums[i]) max1 = nums[i]
-    // if(temp < max && temp > nums[i - 1]) max2 = temp
-
-    console.log(max1)
-    console.log(currentMax)
-    // console.log(max2)
-    console.log()
+    for(let j = i; j < nums.length;j++){
+      if(nums[i] > nums[j]){
+        let temp = nums[i]
+        nums[i] = nums[j]
+        nums[j] = temp
+      }
+    }
   }
 
-  // console.log(max2)
-
-  // return (nums[nums.length - 1]-1)*(nums[nums.length - 2]-1)
+  return (nums[nums.length - 1] - 1) * (nums[nums.length - 2] - 1)
 };
 
 // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

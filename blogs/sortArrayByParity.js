@@ -36,7 +36,6 @@
 
 var sortArrayByParity = function(A) {
   let b = [], c = []
-
   while(A.length > 0){
     if(A[0] % 2 !== 0) {
       if (A[0] < c[0]) c.unshift(A.shift())
@@ -46,7 +45,6 @@ var sortArrayByParity = function(A) {
       else b.push(A.shift())
     }
   }
-
   return [...b, ...c]
 }
 
