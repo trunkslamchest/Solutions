@@ -1,9 +1,9 @@
+// Link To Problem: https://app.codesignal.com/interview-practice/task/5A8jwLGcEpTPyyjTB
+// Link To Blog: https://medium.com/@austin_smith_dev/javascript-problem-solvers-rotate-image-matrix-c02323c1c2fb
+
 // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 // Problem
 // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-// Link To Problem: https://app.codesignal.com/interview-practice/task/5A8jwLGcEpTPyyjTB
-// Link To Blog: https://medium.com/@austin_smith_dev/javascript-problem-solvers-rotate-image-matrix-c02323c1c2fb
 
 // Note: Try to solve this task in-place (with O(1) additional memory), since this is what you'll be asked to do during an interview.
 

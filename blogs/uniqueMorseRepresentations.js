@@ -1,5 +1,5 @@
 // Link to problem: https://leetcode.com/problems/unique-morse-code-words/
-// Link to blog:
+// Link to blog: https://levelup.gitconnected.com/javascript-problem-solvers-unique-morse-code-words-22368f0f640c
 
 // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 // Problem
